@@ -15,6 +15,12 @@ capability is exposed as a CLI command, an AI/MCP tool, a REST endpoint, a web
 form, and an interactive TUI — all generated from one typed source of truth, so a
 human in a terminal and an agent over MCP get identical, structured answers.
 
+<p align="center">
+  <img src="https://github.com/VistA-Copilot/vista-info-hub/raw/master/demo/vista.gif" alt="vista browser — interactive arrow-key exploration of VistA code and data" width="850">
+</p>
+
+<p align="center"><em><code>vista browser</code> — walk packages → routines → the call graph → globals → docs, all from the keyboard.</em></p>
+
 ---
 
 ## Start here: the `vista` CLI
@@ -38,7 +44,8 @@ vista global DPT            # global usage across the code base
 vista rpc XWB EGCHO STRING  # RPC availability, inputs, docs
 vista search "sign-on"      # full-text search across the VA documentation corpus
 vista context PRCA45PT      # an AI-ready markdown bundle: code facts + linked docs
-vista tui                   # interactive operation palette — explore by browsing
+vista browser               # interactive, ranger-style explorer (shown above)
+vista tui                   # fuzzy-find palette over every operation
 ```
 
 Routines, RPCs, options, FileMan files, globals, patches, packages, and the VA
@@ -64,4 +71,4 @@ they can't drift apart.
 | [`vista-info-hub`](https://github.com/VistA-Copilot/vista-info-hub) | The `vista` CLI / MCP / REST / web / TUI tool — start here. |
 
 More tooling is on the way. If you're new to VistA, install the CLI and run
-`vista tui` — it's the fastest way to get your bearings.
+`vista browser` — it's the fastest way to get your bearings.
