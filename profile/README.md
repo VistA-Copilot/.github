@@ -21,6 +21,43 @@ human in a terminal and an agent over MCP get identical, structured answers.
 
 <p align="center"><em><code>vista browser</code> — walk packages → routines → the call graph → globals → docs, all from the keyboard.</em></p>
 
+## One definition, every interface
+
+`vista` reads the VistA code-model, data-model and VA Document Library into a
+single **operation registry** of typed handlers, then projects that one definition
+into five interfaces — so the CLI, an AI agent over MCP, a REST client, a web form
+and the TUI all get identical, structured answers and can never drift apart:
+
+```text
+                        vista · one static binary, many faces
+                                          │ reads the VistA code-model,
+                                          │ data-model & VA Document Library
+                     ┌─────────────────────────────────────────┐
+                     │           operation registry            │
+                     │     typed  Input → Handler → Output     │
+                     │           one source of truth           │
+                     └────────────────────┴────────────────────┘
+                                          │ projected into 5 interfaces
+          ┌───────────────┬───────────────┼───────────────┬───────────────┐
+          ▼               ▼               ▼               ▼               ▼
+         CLI          AI · MCP          REST             Web             TUI
+     vista <op>       serve mcp      POST /op/{}     forms at /       vista tui
+    → JSON / TSV     → MCP tools      + OpenAPI     + HTML frags      + browser
+
+  command tree — every leaf is also an MCP tool, a REST op, a web form & a TUI entry
+  ──────────────────────────────────────────────────────────────────────────────────
+  vista
+  ├─ inspect a routine      routine  where  neighbors  risk  links
+  ├─ packages & catalogs    package  list  tree  layers  matrix
+  ├─ rpcs · options · files rpc  option  file  global
+  ├─ documentation          doc  search  coverage
+  ├─ patches & history      patch  timeline
+  ├─ ai bundles             context  ask
+  ├─ data management        init  doctor  cache  snapshot
+  ├─ introspection          commands  schema  llms
+  └─ other faces            serve  tui  browser
+```
+
 ---
 
 ## Start here: the `vista` CLI
