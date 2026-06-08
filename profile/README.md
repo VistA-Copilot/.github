@@ -2,7 +2,7 @@
 
 **AI-integrated developer tools for VistA.**
 
-VistA — the VA's nationwide electronic healthcare platform — is one of the largest and
+VistA — the VA's digital healthcare platform — is one of the largest and
 longest-lived health IT systems in the world: tens of thousands of routines and globals,
 thousands of FileMan files, RPCs, options, and KIDS builds, and a corresponding vast
 documentation corpus. That depth is exactly what makes it hard to *start* working
