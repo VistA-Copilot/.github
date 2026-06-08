@@ -40,9 +40,9 @@ and the TUI all get identical, structured answers and can never drift apart:
                                           │ projected into 5 interfaces
           ┌───────────────┬───────────────┼───────────────┬───────────────┐
           ▼               ▼               ▼               ▼               ▼
-         CLI          AI · MCP          REST             Web             TUI
-     vista <op>       serve mcp      POST /op/{}     forms at /       vista tui
-    → JSON / TSV     → MCP tools      + OpenAPI     + HTML frags      + browser
+         CLI             TUI            REST             Web          AI · MCP
+     vista <op>      vista menu      POST /op/{}     forms at /       serve mcp
+    → JSON / TSV      + browser       + OpenAPI     + HTML frags     → MCP tools
 
   command tree — every leaf is also an MCP tool, a REST op, a web form & a TUI entry
   ──────────────────────────────────────────────────────────────────────────────────
@@ -55,7 +55,7 @@ and the TUI all get identical, structured answers and can never drift apart:
   ├─ ai bundles             context  ask
   ├─ data management        init  doctor  cache  snapshot
   ├─ introspection          commands  schema  llms
-  └─ other faces            serve  tui  browser
+  └─ other faces            serve  menu  browser
 ```
 
 ---
